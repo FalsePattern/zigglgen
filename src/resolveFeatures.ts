@@ -230,7 +230,7 @@ export function resolveFeatures(
       }
       resolvedExtensions.push({
         key: extensionKey,
-        name: extensionKey.replace(/^GL_/, ""),
+        name: extensionKey,
         commands: [...optionalCommands].sort(compare),
       })
     }
@@ -280,7 +280,7 @@ export function resolveFeatures(
 
       resolvedCommands.push({
         key,
-        name: key.replace(/^gl([A-Z](?:[A-Z](?=[A-Z]|$))*)/, (...x) => x[1].toLowerCase()),
+        name: key,
         params: [...$command.querySelectorAll(":scope > param")].map($ => {
           const typeDependency = $.querySelector(":scope > ptype")?.textContent
           if (typeDependency) {
@@ -348,7 +348,7 @@ export function resolveFeatures(
         const numericValue = BigInt($enum.getAttribute("value")!)
         resolvedConstants.push({
           key,
-          name: key.replace(/^GL_/, ""),
+          name: key,
           value: numericValue.toString(16).toUpperCase().replace(/[0-9A-F]+$/, x => "0x" + x),
           numericValue: numericValue,
           kind,

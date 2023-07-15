@@ -7,16 +7,6 @@ Zig OpenGL binding generator that [runs in your browser](https://castholm.github
 Simply visit [the generator web app hosted online](https://castholm.github.io/zigglgen/), select your API, version,
 profile and extensions and choose *Preview* or *Download* to generate your source file.
 
-Functions, constants, types and extensions are stripped off their prefixes and have their capitalization changed
-slightly but are otherwise identical to their original C/C++ definitions:
-
-| Original C/C++        | Generated Zig       |
-|-----------------------|---------------------|
-| `glClearColor()`      | `clearColor()`      |
-| `GL_TRIANGLES`        | `TRIANGLES`         |
-| `GLfloat`             | `Float`             |
-| `GL_ARB_clip_control` | `.ARB_clip_control` |
-
 Please note that zigglgen currently only officially supports the nightly 0.11.0-dev builds of Zig. Generated code is not
 guaranteed to work with earlier versions of the compiler.
 

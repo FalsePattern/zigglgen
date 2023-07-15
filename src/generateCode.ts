@@ -11,8 +11,8 @@ const NOTICE = [
   "// END OF NOTICE\n",
 ].join("")
 
-const GENERATOR_NAME = "zigglgen v0.4.1"
-const GENERATOR_URL = "https://castholm.github.io/zigglgen/"
+const GENERATOR_NAME = "zigglgen v0.4.1-R"
+const GENERATOR_URL = "https://falsepattern.github.io/zigglgen/"
 
 export function generateCode(features: ResolvedFeatures, apiVersionProfile: string): string {
   const [, , versionMajor, versionMinor] =
